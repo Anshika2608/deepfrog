@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# deepFrog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal React + TypeScript + Vite template with ESLint support.
 
-Currently, two official plugins are available:
+# Features
+React with TypeScript support
+Fast Refresh with Vite
+ESLint with type-aware rules
+Optional React Compiler support
+Ready for production deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Prerequisites
 
-## React Compiler
+Node.js ≥ 18
+npm or yarn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Getting Started Locally
 
-## Expanding the ESLint configuration
+Clone the repository
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+git clone https://github.com/Anshika2608/deepfrog.git
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+cd project
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Install dependencies
+npm install
+# or
+yarn install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Run the development server
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
+# or
+yarn dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Open your browser at http://localhost:5173
+ to view your app.
+
+Build for production
+
+npm run build
+# or
+yarn build
+
+
+The production files will be in the dist folder.
+
+Preview production build locally
+
+npm run preview
+# or
+yarn preview
+
+# Deployment on Vercel
+
+Push your project to a Git repository (GitHub, GitLab, or Bitbucket).
+
+Go to Vercel
+ and import your project.
+
+Configure project settings if necessary:
+
+Framework: Vite
+
+Root Directory: / (or your project folder if nested)
+
+Build Command: npm run build
+
+Output Directory: dist
+
+Click Deploy.
+
+After deployment, Vercel will provide a live URL for your app.
+
+ESLint
+
+This project comes with a recommended ESLint setup for React + TypeScript:
+
+npm run lint
+# or
+yarn lint
+
+
+Optional extensions for stricter type-checking and React-specific rules are included.
+See eslint.config.js for configuration details.
+
+Optional: Enable React Compiler
+
+To enable the React Compiler for better runtime performance:
+
+# Install the package
+npm install @react/compiler
+
+# Configure as per the documentation:
+# https://react.dev/learn/react-compiler/installation
+
+# Project Structure
+├─ public/           # Static assets 
+├─ src/  # Source code
+│  ├─ main.tsx  # Entry point
+|  |─ Assets/   #images
+|  |─ Sections/  #section component
+│  ├─ App.tsx        # Root component
+├─ index.html        # HTML template
+├─ tsconfig.app.json # TypeScript config
+├─ eslint.config.js  # ESLint config
+
 ```
