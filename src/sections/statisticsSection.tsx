@@ -1,15 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Users, Package, Gauge, TrendingUp } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import type { StatItemProps } from "../interfaces/interfaces";
 
-interface StatItemProps {
-  label: string;
-  value: number;
-  suffix?: string;
-  duration?: number;
-  icon: LucideIcon;
-  trigger?: boolean; 
-}
 
 const StatItem: React.FC<StatItemProps> = ({
   label,

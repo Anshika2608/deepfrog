@@ -1,14 +1,6 @@
 import React from "react";
-
 import { BarChart3, Truck, Share2, Check } from "lucide-react";
-interface ProductItem {
-    name: string;
-    tagline: string;
-    icon: React.ComponentType<any>;
-    description: string;
-    features: string[];
-
-}
+import type { ProductItem } from "../interfaces/interfaces";
 const Products: React.FC = () => {
     const products: ProductItem[] = [
         {

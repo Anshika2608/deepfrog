@@ -21,8 +21,8 @@ const Navbar: React.FC = () => {
             </div>
 
             <div className="flex space-x-4">
-                <button className="text-white font-medium hover:text-orange-500">Sign In</button>
-                <button className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+                <button className="text-white font-medium hover:text-orange-500 cursor-pointer">Sign In</button>
+                <button className="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition cursor-pointer">
                     Get Started
                 </button>
             </div>

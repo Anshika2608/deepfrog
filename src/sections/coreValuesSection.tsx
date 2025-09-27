@@ -1,13 +1,6 @@
 import React from "react";
 import { Lightbulb, Shield, TrendingUp as GrowthIcon, Award } from "lucide-react";
-
-interface ValueItem {
-  title: string;
-  text: string;
-  icon: React.ComponentType<any>;
-  iconColor: string;
-  bgColor: string;   
-}
+import type { ValueItem } from "../interfaces/interfaces";
 
 const CoreValuesSection: React.FC = () => {
   const coreValues: ValueItem[] = [

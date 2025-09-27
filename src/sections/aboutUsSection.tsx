@@ -1,10 +1,7 @@
 import React from "react";
 import { Zap, GitBranch, Shield, Briefcase } from "lucide-react";
+import type { WhatWeDoItem } from "../interfaces/interfaces";
 
-interface WhatWeDoItem {
-    text: string;
-    icon: React.ElementType;
-}
 
 const whatWeDoItems: WhatWeDoItem[] = [
     { text: "Build Automations using **agentic AI**", icon: Zap },

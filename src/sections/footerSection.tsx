@@ -1,11 +1,8 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
 import logo from "../assets/logo1.png";
-interface FooterLink {
-  name: string;
-  href: string;
-}
 
+import type { FooterLink } from "../interfaces/interfaces";
 const FooterSection: React.FC = () => {
   const products: FooterLink[] = [
     { name: "Frognosis", href: "#" },

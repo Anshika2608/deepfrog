@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Package, Send } from "lucide-react";
 import type { FormEvent } from "react";
+import type { CtaSectionProps } from "../interfaces/interfaces";
 
-interface CtaSectionProps {
-  contactEmail?: string; 
-}
 
 const CtaSection: React.FC<CtaSectionProps> = ({
   contactEmail = "info@deepfrog.com",
@@ -105,7 +103,7 @@ const CtaSection: React.FC<CtaSectionProps> = ({
             type="submit"
             className="flex items-center justify-center mt-4 px-6 py-4 bg-orange-600 text-white text-base lg:text-lg font-semibold rounded-lg shadow-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-[1.02] active:scale-95"
           >
-            <Send size={20} className="mr-2" />
+            <Send size={20} className="mr-2 cursor-pointer" />
             Send Message
           </button>
         </form>

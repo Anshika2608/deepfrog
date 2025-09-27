@@ -1,14 +1,6 @@
 import React from "react";
 import { Layers, Dna, Cloud, Bot } from "lucide-react";
-
-interface ExpertiseItem {
-    title: string;
-    text: string;
-    icon: React.ComponentType<any>;
-    iconBgColor: string;
-    iconColor: string;
-}
-
+import type { ExpertiseItem } from "../interfaces/interfaces";
 const Expertise: React.FC = () => {
     const expertise: ExpertiseItem[] = [
         {
